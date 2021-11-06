@@ -1,0 +1,213 @@
+body {
+    margin-top: -6px;
+    margin-left: -6px;
+    background-color: white;
+    text-align: justify;
+   
+}
+div#página {
+    line-height: 30px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    width: 1250px;
+    margin: auto;
+    background-color: rgb(250, 250, 250);
+    
+
+}
+
+section {
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-right: 60px;
+    padding-left: 50px;
+}
+
+
+/*MENU*/
+nav#menu {
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(39, 37, 37);
+    padding: 15px;
+    width: 100%;
+    box-shadow: 4px 4px 4px rgb(187, 180, 180);
+}
+
+
+nav#menu ul {
+    list-style: none;
+}
+
+li#nic {
+   
+    margin-right: 290px;
+    color:rgb(214, 210, 206);;
+    font-size: 25px;
+    font-family: Open Sans;
+}
+nav#menu li {
+    display: inline-block;
+    padding-left: 50px;
+   
+}
+nav#menu a {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Futura PT";
+    color: rgb(233, 196, 97);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 1px;
+    background-color: rgb(39, 37, 37);
+
+}
+nav#menu a:hover {
+    color: black;
+    background-color: rgb(238, 231, 231);
+    transition: 0.8s;
+}
+
+
+/*FONTES A+*/
+@font-face {
+    font-family:"Futura PT" ;
+    src: url("imgs/futura-pt-light.otf") format("opentype"), url("imgs/Futura") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Open Sans" ;
+    src: url("imgs/OpenSans-Regular.ttf"), url("imgs/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*FOOTER*/
+footer { 
+    margin-top: 500px;
+    position: absolute;
+    background-color: rgb(27, 22, 19);
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+footer a {
+    font-family: Open Sans;
+    display: inline-block;
+    padding-left: 80px;
+    text-decoration: none;
+    color: rgb(223, 193, 110);
+}
+footer a:hover {
+   
+    text-decoration: underline;
+    
+   
+}
+footer p {
+   
+    font-size: 16px;
+    font-family: Open Sans;
+    padding-left: 40px;
+    color: rgb(202, 202, 202);
+}
+footer p#s {
+    font-family: Open Sans;
+    display: inline-block;
+    padding-left: 40px;
+    color: rgb(202, 202, 202);
+    font-size: 20px;
+}
+
+
+/*H'S*/
+h1 {
+    color: rgb(187, 154, 65);
+    font-size: 35px;
+}
+h2 {
+    color: rgb(230, 230, 230);
+    font-family: Open Sans;
+    padding-left: 40px;
+    font-size: 35px;
+   
+}
+p {
+    text-indent: 20px;
+}
+main {
+    display: block;
+    width: 980px;
+    float: left;
+   
+}
+
+.tga {
+    padding-left: 15px;
+    padding-top: 310px;
+    padding-right: 15px;
+    height: 170px;
+    width: 170px;
+}
+
+.tg {
+    padding-left: 15px;
+    margin-top: 100px;
+    padding-right: 15px;
+    width: 170px;
+    height: 170px;
+}
+
+
+a.as:hover {
+    transition: 0.4s;
+    border-radius: 6px;
+    height: 90px;
+    padding-top: 170px;
+    padding-bottom: 12px;
+    background-color: rgb(209, 208, 206);
+}
+
+
+a#you {
+    font-weight: bold;
+    font-family: "Futura PT";
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    background-color: rgb(209, 208, 206);
+    margin-left: 48px;
+    padding: 7px;
+    border-radius: 2px ;
+    letter-spacing: 3.3px;
+    
+}
+a#you:hover  {
+    transition: 0.5s;
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+a#yous {
+    font-weight: bold;
+    font-family: "Futura PT";
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    background-color: rgb(209, 208, 206);
+    margin-left: 55px;
+    padding: 7px;
+    border-radius: 2px ;
+    letter-spacing: 3.3px;
+    
+}
+a#yous:hover  {
+    transition: 0.5s;
+    background-color: rgb(26, 26, 26);
+    color: white;
+
+}

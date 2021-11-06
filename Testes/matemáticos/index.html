@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+</style>
+<body>  
+    <p>Inicio <input type="number" value="Inicio" id="inic"></p><br>
+    <p>Passo <input type="number" value="passo" id="pass"></p><br>
+    <p>Fim <input type="number" value="fim" id="fini"></p>
+    <input type="button" value="começar" onclick="contar()">
+    <div id="res">Contando... </div>
+    <script>
+        function contar(){
+            let ini = document.getElementById("inic")
+            let pas = document.getElementById("pass")
+            let fim = document.getElementById("fini")
+            let res  = document.getElementById("res")
+        if (ini.value.length == 0 || pas.value.length == 0 || fim.value.length == 0){
+            window.alert("[ERRO] Faltam dados!")
+        }else {
+            let i = Number(ini.value)
+            let p = Number(pas.value)
+            let f = Number(fim.value)
+            
+            for (var c = i ; c <= f  ; c += p) {
+                res.innerText += (`${c} /*  `)
+
+            }
+        }
+           
+
+    }
+
+
+    </script>
+</body>
+</html>

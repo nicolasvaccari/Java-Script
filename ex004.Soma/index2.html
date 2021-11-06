@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin:15px;
+        }
+        input {
+            font: normal 18pt;
+            width: 100px;
+            height: 20px;
+        }
+        body {
+            padding-left: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <input type="number" name="" id="txtn1"> -
+    <input type="number" name="" id="txtn2">
+    <input type="button" value="Subtrair" onclick="clicar()">
+    <p id="res">=</p>
+
+    <script>
+        function clicar() {
+            var txt1 = window.document.getElementById('txtn1')
+            var txt2 = window.document.getElementById('txtn2')
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var res = window.document.getElementById('res')
+            var d = n1 - n2
+            res.innerText = (`= ${d}`)
+        }
+    </script>
+</body>
+</html>

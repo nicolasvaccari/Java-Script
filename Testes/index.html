@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste JavaScript</title>
+</head>
+<body onload="funcionar()">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: burlywood;
+            width: 900px;
+            text-align: center;
+            margin: auto;
+        }
+        main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 25px;
+          
+
+        }
+        div {
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            border-radius: 100px;
+            text-align: center;
+            background-color: green;
+            color: white;
+            font-size: 25px;
+            margin-left: 320px;
+            
+        }
+
+    </style>
+    <h1>Hora do dia</h1>
+    <main>
+        <p id="p">Agora são  horas</p>
+        <div id="divf">
+            f
+        </div>
+    </main>
+
+    <script>
+        var p = window.document.getElementById('p')
+        var div = window.document.getElementById('divf') 
+        var data = new Date()
+        var hora = 
+        
+        function funcionar() {
+            if (hora < 12) {
+                p.innerHTML = (`Bom dia`)
+                div.style.backgroundColor = 'gold'
+                window.document.body.style.backgroundColor = 'burlywood'
+
+            }else if (hora > 12 && hora < 18) {
+                p.innerHTML = (`Boa tarde`)
+                div.style.backgroundColor = 'orange'
+                window.document.body.style.backgroundColor = 'olivedrab'
+            }else {
+                p.innerHTML = (`Boa Noite`)
+                div.style.backgroundColor = 'dimgrey'
+                window.document.body.style.backgroundColor = 'black'
+            }
+               
+
+        }
+
+    </script>
+</body>
+</html>

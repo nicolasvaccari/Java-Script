@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            background-color: yellowgreen;
+            width: 200px;
+            height: 200px;
+            font-family: sans-serif;
+            line-height: 200px;
+            color: white;
+            text-align: center ;
+           
+        }
+    </style>
+
+    <div id="er">
+        interaja
+     </div>
+ 
+    </main>
+    <script>
+        var a = window.document.getElementById('er')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseover', entrar)
+        a.addEventListener('mouseout', sair)
+        
+            function clicar() {
+                a.innerText = "clicou!"
+                a.style.backgroundColor = "red"
+            }
+            function entrar() {
+                a.innerText = 'entrou!'
+
+            }
+            function sair() {
+                a.innerText = 'saiu'
+                a.style.backgroundColor = 'yellowgreen'
+
+            }
+
+    </script>
+    <footer>
+       <p> Todos os direitos reservados a &copy; Nicolas Vaccari 2021</p>
+    </footer>
+</body>
+</html>

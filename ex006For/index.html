@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Inicio<input type="number" name="" id="ini"> <br>
+    Fim<input type="number" name="" id="fim">  <br>
+    Passo<input type="number" name="" id="pas">  <br>
+    <input type="button" value="Valor" onclick="funcionar()">  <br>
+    <p id="res">aa</p>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin
+        }
+        input {
+            width: 60px;
+            line-height: 10px;
+            padding: 5px;
+            margin: 10px;
+
+        }
+
+    </style>
+    <p>
+        for(<strong> inicialização = 1</strong> (quase sempre o valor do incremento);<strong> teste lógico</strong> (quantas vezes você quer repitir ;<strong>incremento++</strong>) <pre>
+         {
+            document.write(Contagem Do menor ao maior em: (`${inicialização}`)
+        }
+    </pre>
+    
+    </p>
+    <script>
+        function funcionar() {
+            var ini = window.document.getElementById('ini')
+            var fim = window.document.getElementById('fim')
+            var pas = window.document.getElementById('pas')
+            var i = Number(ini.value)
+            var f = Number(fim.value)
+            var p = Number(pas.value)
+            var res = window.document.getElementById('res')
+
+            for (var c = i; c <= f; c += p) {
+                res.innerHTML = (`${c}`)
+            } 
+        }
+       
+
+    </script>
+    <script>
+                document.write('Contagem Do menor ao maior em:')
+          for( var i = 1 ; i <= 5; i++) {
+            document.write('<br>')
+                document.write(`${i}`)
+
+            }
+    </script>
+</body>
+</html>

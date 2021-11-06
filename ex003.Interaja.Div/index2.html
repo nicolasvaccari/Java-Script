@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            
+        }
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+    <div id="ou">
+         Interaja
+    </div>
+    <script>
+
+        var a = window.document.getElementById('ou')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseover', entrar)
+        a.addEventListener('mouseout', sair)
+            function clicar() {
+            a.innerText = "clicou"
+            a.style.backgroundColor = 'red'
+            }
+            function entrar() {
+            a.innerText = "entrou"
+            }
+            function sair() {
+            a.innerText = 'Saiu'
+            a.style.backgroundColor = 'green'
+            }
+
+
+    </script>
+</body>
+</html>

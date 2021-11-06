@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a>
+            <li><a href="index2.html">Portifólio</a>
+            <li><a href="index2.html">Desenhos</a>
+            <li><a href="index2.html">Sobre</a>
+            <li><a href="index2.html">Contato</a>
+        </ul>
+    </nav>
+  
+
+    <main>
+        <h2>Qual foi o resultado da sua nota?</h2>
+        <br>
+        <br>
+        <input type="number" name="" id="txt" onclick=" jss()" onmouseover="jss()" onmouseout="out()">
+        <input type="button" value="Nota" id="ae"onclick="clicar()">
+        <p id="res1"></p> <p id="fav"></p>
+
+
+    <script>
+        function clicar() {
+    var res = window.document.getElementById('fav')
+    var res1 = window.document.getElementById('res1')
+    var nota1 = window.document.getElementById('txt')
+    var nota = Number(nota1.value)
+if(nota >= 70){
+    res1.innerHTML = ('Você foi aprovado')
+        if (nota == 100) {
+            res.innerHTML = ('com maestria')
+        }else if (nota >= 85 && nota <=99){
+            res.innerHTML = ('com louvor')
+        }else if (nota >= 101){
+            alert("Não é possível tirar uma nota acima de cem.")
+            res1.innerHTML = ('')
+            res.innerHTML = ('')
+        }else if (nota >= 71 && nota <=84){
+            res.innerHTML = ('')
+    }
+}else if (nota <= 69){
+    res1.innerHTML = ('Você foi reprovado')
+        if (nota <= 34){
+            res.innerHTML = ('com maestria')
+        }else if (nota <= 50 && nota >=35){
+            res.innerHTML = ('com louvor')
+        }else if (nota >= 10 && nota > 0) {
+            res.innerHTML = ('Você é UM ANIMAL DE TETA QUADRADA!!')
+        }else if (nota == 0) {
+            res.innerHTML = ('Desevolução da humanidade.')
+        }else {
+            res.innerHTML = ('.')
+        }
+}
+}
+    </script>
+    <script>
+        function jss() {
+            var nota1 = window.document.getElementById('txt')
+            txt.style.backgroundColor = "rgba(84, 143, 161, 0.966)"
+            txt.style.color = "white"
+            txt.style.transition = "0.4s"
+        }
+    </script>
+    <script>
+         function out() {
+            var nota1 = window.document.getElementById('txt')
+            txt.style.backgroundColor = "rgb(182, 234, 245)"
+            txt.style.transition = "0.4s"
+            txt.style.color = "black"
+        }
+    </script>
+    </main>
+    
+</body>
+</html>
