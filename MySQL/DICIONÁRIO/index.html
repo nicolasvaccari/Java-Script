@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>MySQL
+        </ul>
+
+    </nav>
+    <main>
+    
+    <h2 id="f">Comandos básicos:</h2>
+    <pre>
+    <hr>
+    <h2>Criar um banco de dados</h2>
+    1-  create cadastro;         
+    <hr>
+    <h2>Colocar table dentro de cadastro</h2>
+    2-  use cadastro;               
+    <hr>
+    <h2>Criar uma tabela com as informações</h2>
+    3-  create table pessoas (
+    )
+    <hr>
+        create table pessoas (
+        nome varchar(30),
+        idade tinyint,
+        sexo char (1),
+        peso float,
+        altura float,
+        nacionalidade varchar(20)
+    );        
+
+    <hr>
+    <h2>Mostrar tabela no terminal</h2>
+    4- describe pessoas;           
+    <hr>
+    5- drop database cadastro;            
+    <hr>
+    <h2>Chaves primárias, not null, auto_increment e etc.</h2>
+    create database cadastro
+
+    6- default character set utf8
+    default collate utf8_general_ci;
+
+    create table pessoas (
+      - id int not null auto_increment,
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M','F'),
+        peso decimal(5,2),
+        altura decimal(3,2),
+        nacionalidade varchar(20) default 'Brasil',
+      - primary key (id)
+      ) default charset =  utf8;
+
+<hr>
+<h2>Cadastrar pessoas</h2>
+    7-  insert into pessoas
+        (nome, nascimento, sexo, peso, altura, nacionalidade)
+        values
+        ('Ricardo' , '1980-10-15' ,'M' ,'80.3' ,'2.1' , default);
+      
+        select * from pessoas;
+    <hr>
+    <h2>Ver pessoas cadastradas</h2>
+    select * from pessoas;
+    <h2>Cadastrar várias pessoas + simplificação</h2>
+    insert into pessoas values
+    (default,'Creusa' , '2005-08-12' ,'F' ,'74.52' ,'1.69' , default),
+    (default,'Pedrao' , '1970-08-11' ,'M' ,'90.53' ,'1.91' , default),
+    (default,'Osiéias' , '2002-12-04' ,'M' ,'92.51' ,'1.87' , default);
+
+    select * from pessoas
+  
+   <h2>Dml ddl</h2>
+   <ul>DDL</ul>
+   <li>create database
+   <li>create table
+   <li>alter table
+   <li>drop table
+       <br>
+    <ul>DML</ul>
+    <li>insert into
+    <li>uptade
+    <li>delete
+    <li>trincate
+
+   <hr>
+   <h2>Alterar tabelas e adicionar novas colunas</h2>
+    desc pessoas;
+
+    alter table pessoas
+    add column profisssao varchar(10);
+    <h3>Escolher a posição da coluna</h3>
+    desc pessoas;
+
+    alter table pessoas
+    add column profisssao varchar(10) after nome;
+    ----------------------------------------------
+    alter table pessoas
+    add column profisssao varchar(10) first;
+    <h3>Deletar colunas</h3>
+    desc pessoas;
+    alter table pessoas
+    drop column pessoas
+    <h2>Modificar coisas dentro das colunas</h2>
+    alter table pessoas
+    modify column profisssao varchar(20);
+    <h2>Modificar o nome das colunas</h2>
+    alter table pessoas
+    change column profisssao prof varchar(20);
+    <h2>Colocar uma chave primaria</h2>
+    alter table pessoas
+    add primary key (idprof);
+
+    ----------------------------------------------
+    rename to pessoas
+    <h2></h2>
+    <hr>
+    <h2>Aprimorando o código e a não repetição de coisas do banco  com o mesmo nome</h2>
+ 
+    create table <strong>if not exists </strong> cursos (
+        nome varchar(30) <strong>not null unique</strong>,
+        descricao text,
+        carga int unsigned,
+        totaulas int unsigned,
+        ano year default '2021',
+        ) default charset = utf8
+     <h3>-------------
+         <h2>Apagar bancos ou tabelas:</h2>
+         drop table gafanhotos
+         drop database cursos1
+         <h2>Adicionar CHAVE ESTRANGEIRA</h2>
+         alter table gafanhotos
+        add foreign key (cursopreferido)
+        references cursos(idcurso);     
+    </pre>
+    </main>
+</body>
+</html>

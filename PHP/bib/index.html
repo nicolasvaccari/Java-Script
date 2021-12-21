@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h1>Dicionário PHP</h1>
+    <hr>
+    <h2>Printar na tela</h2>
+    <p>echo e print</p>
+<pre>
+    echo "Olá, mundo!";
+    
+    print "Olá, mundo!";
+?>
+</pre>
+
+<h2>Variáveis em php</h2>
+<p>O uso do $</p>
+<pre>
+?php
+<h3>Meus dados</h3>
+$nome = "Nicolas";
+$idade = 14;
+$altura = 1.83;
+echo "Meu nome é $nome, minha idade é $idade, e a minha altura é $altura";
+<h3>variáveis dentro de variáveis</h3>
+$bebida = "refrigerante";
+$$bebida = "guaraná";
+echo "$refrigerante"
+?>
+</pre>
+
+<h2>Tipos de dados</h2>
+<p>is_seilá é uma string?</p>
+
+<pre>
+?php
+//gettype() - Retorna o tipo da variável.
+var_dump() – Retorna o tipo e o valor.
+
+is_int() – Verifica se a variável em questão é do tipo integer.
+is_bool() – Verifica se a variável em questão é do tipo boolean.
+is_numeric() – Verifica se a variável em questão é uma string numérica, ex "100".
+is_string() – Verifica se a variável em questão é do tipo string.
+is_float() – Verifica se a variável em questão é do tipo flutuante.
+is_array() – Verifica se a variável em questão é do tipo Array.
+is_object() – Verifica se a variável em questão é do tipo objeto.
+
+    
+    
+?>
+
+<h2>Extrair dados de formulários:</h2>
+<p>$_GET[""]</p>
+
+<h3>formulários</h3>
+
+
+
+echo"form method="get" action="text.php">
+    input type="number" name="n1" id="">
+    input type="number" name="n2" id="">
+    input type="number" name="inc" id="">
+    input type="submit" value="funcionar">
+/form>""
+
+
+<h2>Estruturas Condicionais If, Elif e Else</h2>
+?php
+$R = $_GET["input00"];
+    if ($R == null) {
+        echo "<br>Você deve inserir um valor para funcionar";
+    }else if ($R ^= -1){
+        echo "<br>Não é possível calcular números negativos.";
+    }else if ($R == 0) {
+        echo "<br>você colocou o número $R";
+        echo "<br>E não é possível calcular a sua raiz.";
+    }else {
+        echo "<br>você colocou o número $R";
+        $raiz = sqrt($R);
+        echo "<br>E a sua raiz é igual a:". number_format($raiz, 2);
+    }
+
+<h2>Estruturas de repetição</h2>
+<p>For, while</p>
+<h3>while</h3>
+$n1 = $_GET["n1"];
+$n2 = $_GET["n2"];
+$in = $_GET["inc"];
+while($n1 ^~= $n2) {
+    echo "$n1 <br>";
+    $n1 = $n1 + $in;
+}
+
+<h2>function e Rotinas</h2>
+
+<?php
+        function somar ($n1, $n2) {
+            $a = ($n1 + $n2)
+            echo "$a";
+
+        }
+        $q = $_GET["unp1"];
+        $w = $_GET["unp2"];
+        soma ($q,$w);
+        ?>
+<h1>ORIENTAÇÃO A OBJETOS:</h1>
+<h2>caneta.php</h2>
+?php
+    class Caneta {
+        public $modelo;
+        private $ponta;
+        public function getModelo() {
+            return $this->modelo;
+        }
+        public function setModelo($m) {
+            $this->modelo = $m;
+        }
+        public function getPonta() {
+            return $this->ponta;
+        }
+        public function setPonta($p)  {
+            $this->ponta = $p;
+        }
+    }
+
+?>
+<h2>Index.php</h2>
+!DOCTYPE html>
+html lang="en">
+head>
+    meta charset="UTF-8">
+    meta http-equiv="X-UA-Compatible" content="IE=edge">
+    meta name="viewport" content="width=device-width, initial-scale=1.0">
+    title>Document/title>
+/head>
+body>
+   
+    ?php
+        require_once "caneta.php";
+            $c1 = new caneta;
+            $c1->setModelo("BIC Cristal");
+            $c1->setPonta("0.5");
+            print_r($c1);
+    ?>
+
+    
+/body>
+html>
+</pre>
+
+</main>
+</body>
+</html>
